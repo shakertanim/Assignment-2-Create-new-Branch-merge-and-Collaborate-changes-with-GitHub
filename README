@@ -1,0 +1,39 @@
+#### Use the command curl -I https://www.learnenough.com/ to fetch the HTTP header for the Learn Enough website. What is the HTTP status code for the address? How does this differ from the status code for learnenough.com (without the https://)?
+
+curl -I https://www.learnenough.com/
+
+% curl -I https://www.learnenough.com/
+HTTP/1.1 200 OK
+date: Fri, 01 Mar 2024 14:57:27 GMT
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+content-type: text/html; charset=utf-8
+etag: W/"9fcb209b7587948fb8e9d9e2c401f730"
+cache-control: max-age=0, private, must-revalidate
+set-cookie: ahoy_visitor=405c8bd5-760c-46f6-9724-c39f40f6b2b8; path=/; expires=Sun, 01 Mar 2026 14:57:26 GMT
+set-cookie: ahoy_visit=39aea886-ac25-436e-af4b-a96cef438772; path=/; expires=Fri, 01 Mar 2024 18:57:26 GMT
+set-cookie: _polytexnic_session=S2V21Oyd%2B7tVcb%2F153arMtaRa%2F9TU3Lwf%2BtzXQnSBA04W0P0UNkY9Waa1gl0pyVAqpUgCQYwQlIlOmSYYIiOdXCQV6f1aE%2Bu%2FXR6xahWSSCH9dvGKfw9U%2FpgnHaLrntfl5Mxjv1UMlOccKZ9VP0%3D--UhhzlgVXdJDej4F1--FVl1UVbjcytwEc%2FQBAa9DQ%3D%3D; path=/; HttpOnly
+x-request-id: ae315511-5cd1-40e3-90ef-6f20cb2ea2ac
+x-runtime: 0.863477
+x-envoy-upstream-service-time: 868
+vary: Accept-Encoding
+server: envoy
+transfer-encoding: chunked
+
+
+% curl -I learnenough.com      
+HTTP/1.1 301 Moved Permanently
+location: https://learnenough.com/
+vary: Accept-Encoding
+date: Fri, 01 Mar 2024 14:57:48 GMT
+server: envoy
+transfer-encoding: chunked
+
+
+
+#### First command with https giving the status code of 200. 200 means okay and curl is able to get the page by browing the https url.
+#### Second command with no https is actually trying to call the http version of the url learnenough.com. Where http is implicit. When its calling the url without https, its redirecting the curl to actual website with https, where the redirection code is 301.
