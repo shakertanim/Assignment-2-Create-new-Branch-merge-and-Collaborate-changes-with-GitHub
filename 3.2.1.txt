@@ -1,0 +1,6 @@
+1. Commit the .gitignore file to your repository. Hint: Running git commit -am isn’t enough. Why not?
+  - Done.
+  - git commit -am will only tracked the file. git push needs to run to push the changes to the repository.
+2. Push your commit up to GitHub and confirm using the web interface that the push succeeded.
+  - Push Done.
+  - Push succeeded.
