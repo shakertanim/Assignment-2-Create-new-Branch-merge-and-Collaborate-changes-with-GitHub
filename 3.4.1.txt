@@ -1,0 +1,9 @@
+1. The git checkout -f trick works only with files that are staged for commit or are already part of the repository, but sometimes you want to get rid of new files as well. Using touch, create a file with a name of your choice, then git add it. Verify that running git checkout -f gets rid of it.
+  - Yes git checkout -f get rids of the file I have created. 
+2. Like many other Unix programs, git accepts both “short form” and “long form” options. Repeat the previous exercise with git checkout --force to confirm that the effects of -f and --force are identical. Extra credit: Double­check this conclusion by finding the “force” option in the output of git help checkout.
+  - Yes git checkout -f and git checkout --force has the same function.
+  - -f, --force
+           When switching branches, proceed even if the index or the working tree differs from HEAD, and even if there are untracked files in the way. This is used to throw away local changes and any
+           untracked files or directories that are in the way.
+
+           When checking out paths from the index, do not fail upon unmerged entries; instead, unmerged entries are ignored.
