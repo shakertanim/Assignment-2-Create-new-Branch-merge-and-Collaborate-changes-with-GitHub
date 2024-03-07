@@ -1,0 +1,8 @@
+
+1. Click on the image link at GitHub to verify that the git push succeeded. 
+  - (Yes succeeded)
+2. At this point, the number of commits is large enough that the output of git log -p is probably too big to fit in your terminal window. Con­ firm that running git log -p drops you into a less interface for easier navigation.
+  - Yes git log -p is not fitting in my terminal window, which led to less interface with a : at the bottom where to perform opeations on the log.
+3. Use your knowledge of less commands to search for the commit that added the HTML DOCTYPE. What is the SHA of the commit?
+  - I could find the commit for add DOCTYPE.
+  - commit bfffab33fc2b679d535c41e9f11820ad55358a63
